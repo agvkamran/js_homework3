@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.card_blocks {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #293B5F;
+}
+
+.card_block {
+    margin: 30px;
+    width: 25%;
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+    font-size: 20px;
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.5);
+    transition: ease-in-out 0.5s;
+}
+
+.content_block {
+    position: relative;
+    z-index: 500;
+}
+
+.card_block.active {
+    height: 280px;
+}
+
+.card_block > h2,p {
+    margin-top: 5px;
+}
+
+.form {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.input {
+    border: none;
+    padding: 12px;
+    width: 75%;
+    outline: none;
+    border: 1px solid transparent;
+}
+
+.input_first:focus {
+    border: 1px solid black;
+}
+
+.btn_send {
+    width: 80px;
+    font-size: 18px;
+    padding: 7px;
+    border: none;   
+    color: #fff;
+    background-color: #39CCCC;
+    background-color: #293B5F;
+    cursor: pointer;
+    border: 3px solid transparent;
+    transition: ease-in-out 0.5s;
+}
+
+.btn_send:hover {
+    border: 3px solid #fff;
+}
+
+.toggle {
+    position: absolute;
+    top: 110px;
+    right: 0; 
+    background-color: #39CCCC;
+    background-color: #293B5F;
+    width: 80px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.card_block .toggle .icon{
+    transition: ease-in-out 0.5s;
+}
+
+.card_block.active .toggle .icon{
+    transform: rotate(180deg);
+    transition: ease-in-out 0.5s;
+}
+
+.right {
+    background: #00C1D4;
+}
+
+.mistake {
+    background: #FF3D68;
+}
+
+.question_content_first {
+    z-index: 100;
+    position: relative;
+    overflow: hidden;
+}
+
+.circle {
+    z-index: 1;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 550px;
+    height: 550px;
+    background: #dadada;
+    border-radius: 50%;
+    transform: translateX(-40%);
+    overflow: hidden;
+}
+
+.icon.active {
+    transform: rotate(180deg);
+}
+
+.footer {
+    background-color: #293B5F;
+    color: #fff;
+}
+
+
+@media screen and (max-width: 1700px) {
+    .card_block {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .card_block {
+        width: 51%;
+    }
+}
+
+@media screen and (max-width: 830px) {
+    .card_block {
+     font-size: 18px;
+     height: 190px;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .card_block {
+        height: 280px;
+    }
+    .toggle {
+        display: none;
+    }
+}
