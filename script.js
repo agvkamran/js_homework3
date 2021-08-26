@@ -36,7 +36,7 @@ function createCard(obj, totalQuestions) {
     input.placeholder = 'Выберите какой либо вариант';
     input.classList.add('input');
 
-    input.oninput = function (v) {
+    input.oninput = function () {
         if (input.value.length == 0)
             return;
 
@@ -58,16 +58,6 @@ function createCard(obj, totalQuestions) {
     sendBlock.appendChild(input);
     sendBlock.appendChild(btnSend);
     contentBlock.appendChild(sendBlock);
-    let toggleCard = document.createElement('div');
-    toggleCard.classList.add('toggle');
-    toggleCard.addEventListener('click', function () {
-        cardBlock.classList.toggle('active');
-    })
-    let icon = document.createElement('img');
-    icon.src = './images/arr.png';
-    icon.classList.add('icon');
-    toggleCard.appendChild(icon);
-    contentBlock.appendChild(toggleCard);
     btnSend.addEventListener('click', function () {
         let yourAnswer = document.createElement('p');
         yourAnswer.innerHTML = `Ваш ответ: ${input.value}`;
@@ -92,7 +82,7 @@ function createCard(obj, totalQuestions) {
         if (rigthCounts + wrongCounts == totalQuestions) {
             let footer = document.querySelector(".footer");
             footer.classList.add('footer');
-            
+
             let rightCountsP = document.createElement("p");
             rightCountsP.innerHTML = "Количество правильных ответов: " + rigthCounts;
             footer.appendChild(rightCountsP);

@@ -17,12 +17,16 @@
     margin: 30px;
     width: 25%;
     position: relative;
-    height: 200px;
+    height: 300px;
     overflow: hidden;
     font-size: 20px;
     padding: 25px;
     background: rgba(255, 255, 255, 0.5);
     transition: ease-in-out 0.5s;
+}
+
+.card_block:hover {
+    transform: scale(1.05);
 }
 
 .content_block {
@@ -54,7 +58,7 @@
     border: 1px solid transparent;
 }
 
-.input_first:focus {
+.input:focus {
     border: 1px solid black;
 }
 
@@ -73,28 +77,6 @@
 
 .btn_send:hover {
     border: 3px solid #fff;
-}
-
-.toggle {
-    position: absolute;
-    top: 110px;
-    right: 0; 
-    background-color: #39CCCC;
-    background-color: #293B5F;
-    width: 80px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-}
-.card_block .toggle .icon{
-    transition: ease-in-out 0.5s;
-}
-
-.card_block.active .toggle .icon{
-    transform: rotate(180deg);
-    transition: ease-in-out 0.5s;
 }
 
 .right {
@@ -122,10 +104,6 @@
     border-radius: 50%;
     transform: translateX(-40%);
     overflow: hidden;
-}
-
-.icon.active {
-    transform: rotate(180deg);
 }
 
 .footer {
@@ -156,8 +134,5 @@
 @media screen and (max-width: 600px){
     .card_block {
         height: 280px;
-    }
-    .toggle {
-        display: none;
     }
 }
